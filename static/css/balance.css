@@ -1,0 +1,67 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet';
+
+.container-main { grid-area: main; }
+.container-menu { grid-area: menu; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu main main main main main';
+  gap: 5px;
+  background-color: #CAF0F8;
+  padding: 5px;
+}
+
+.container {
+    display: flex;
+    margin-top: 2%;
+}
+
+.card {
+    flex-direction: column;
+    width: 50%;
+    background-color: rgba(72, 202, 228, .8);
+    margin: 0 2%;
+    padding: 2% 3%;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(72, 202, 228,0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+    .container {
+       padding: 4%;
+       display: block;
+       margin: 2% 5% -10% -5%;
+    }
+    .card {
+      width: 100%;
+      margin: 3%;
+    }
+    .menu {
+      display: none;
+    }
+    .grid-container{
+      padding-bottom: 5%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .container {
+       display: grid;
+       grid-template-columns: repeat(2,50%);
+       grid-template-rows: repeat(2,1fr);
+    }
+    .card {
+      margin: 3%;
+      width: 80%;
+    }
+    .menu {
+      display: block;
+    }
+    .grid-container{
+      padding-bottom: 5%;
+    }
+    .title {
+      margin-left: -10%;
+    }
+}

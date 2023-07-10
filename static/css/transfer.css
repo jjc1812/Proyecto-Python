@@ -1,0 +1,63 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet';
+
+.container-form { grid-area: main; }
+.container-menu { grid-area: menu; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu main main main main main';
+  gap: 5px;
+  background-color: #CAF0F8;
+  padding: 5px;
+}
+
+form {
+  background: #0077B6;
+  padding: 2% 30%;
+  border-radius: 10px;
+}
+
+input, label {
+  display:block;
+}
+
+input {
+  margin: 1% 25%;
+  width: 50%;
+  padding: 1%;
+	font-family: sans-serif;
+}
+
+.form-content {
+  background-color: #90E0EF;
+	font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+.boton {
+  background-color: #90E0EF;
+  padding: 1% 0;
+  width: 100%;
+}
+
+.boton > input {
+  margin-left: 26%;
+  background-color: #48CAE4;
+}
+
+.error {
+  box-shadow: 0 8px 16px 0 rgba(255, 0, 0, 0.5), 0 6px 20px 0 rgba(255, 0, 0, 0.19);
+}
+
+
+.boton >input:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+}
+
+.alerta {
+  background-color: #48CAE4;
+  color: black;
+  border-radius: 10px;
+}

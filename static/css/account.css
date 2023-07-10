@@ -1,0 +1,32 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet';
+
+.container-main { grid-area: main; }
+.container-menu { grid-area: menu; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'menu main main main main main';
+    gap: 5px;
+    background-color: #CAF0F8;
+    padding: 5px;
+}
+
+.account-container {
+    background-color: #90E0EF;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 1%;
+}
+
+.account-item {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 1%;
+    background-color: #48CAE4;
+    box-shadow: 0 5px 10px 0 rgba(72, 202, 228,0.5), 0 3px 15px 0 rgba(0, 0, 0, 0.3);
+    padding-left: 5%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 8px;
+}

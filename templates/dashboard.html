@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Total</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="../static/js/dashboard.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../static/js/api.js"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="container-header header area">
+            <a href="{{ url_for('balance') }}">
+                <div class="header-item" onmouseover="hoverAmount('{{ total }}')" onmouseleave="hideAmount()">
+                    <p><i class="fa-solid fa-circle-dollar-to-slot"></i> Monto</p>
+                    <p class="subtitle" id="monto">$ *******</p>
+                </div>
+            </a>
+        
+            <a href="{{ url_for('transfer') }}">
+                <div class="header-item" onmouseover="hoverAlias()" onmouseleave="hideAlias()">
+                    <p><i class="fa-solid fa-money-bill-transfer"></i> Transferencia</p>
+                    <p class="subtitle" id="alias">************************</p>
+                </div>
+            </a>
+        
+            <a href="{{ url_for('account') }}">
+                <div class="header-item" onmouseover="hoverAccount()" onmouseleave="hideAccount()">
+                    <p><i class="fa-solid fa-address-card"></i> Datos de la cuenta</p>
+                    <p class="subtitle" id="cuenta">*****************</p>
+                </div>
+            </a>
+        </div>
+        <div class="container-menu area">
+            <div class="title menu">
+                <ul id="menu">
+                    <li>
+                        <a href="{{ url_for('index') }}">
+                            <div class="menu-item subtitle logo">
+                                <img src="{{ url_for('static', filename='img/logo.JPG') }}" alt="Logo" />
+                                <p class="subtitle">Pago Total</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('balance') }}">
+                            <div class="menu-item subtitle">
+                                <p class="subtitle">Saldos</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('transfer') }}">
+                            <div class="menu-item">
+                                <p class="subtitle">Transferencias</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('account') }}">
+                            <div class="menu-item">
+                                <p class="subtitle">Datos de la cuenta</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container-movimientos area">
+            <table class="tabla">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Movimiento</th>
+                    <th>Detalle</th>
+                </tr>
+                    {% for movement in movements %}
+                        <tr>
+                            <td>{{ movement[1] }}</td>
+                            <td>{{ movement[2] }}</td>
+                            <td>{{ movement[3] }}</td>
+                        </tr>
+                    {% endfor %}
+              </table>
+        </div>  
+        <div class="container-contactos area">
+            <div class="title contactos">Contactos
+                <ul id="contacts"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

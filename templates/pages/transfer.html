@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Total</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/transfer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="../static/js/transfer.js"></script>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="container-menu area">
+            <div class="title menu">
+                <ul id="menu">
+                    <li>
+                        <a href="{{ url_for('index') }}">
+                            <div class="menu-item subtitle logo">
+                                <img src="{{ url_for('static', filename='img/logo.JPG') }}" alt="Logo" />
+                                <p class="subtitle">Pago Total</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('balance') }}">
+                            <div class="menu-item subtitle">
+                                <p class="subtitle">Saldos</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('transfer') }}">
+                            <div class="menu-item">
+                                <p class="subtitle">Transferencias</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('account') }}">
+                            <div class="menu-item">
+                                <p class="subtitle">Datos de la cuenta</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-form area">
+            <div class="title">Transferencia hacia otras cuentas</div>
+            <br>
+            <form id="formulario" method="POST">
+                <div class="form-content">
+                    <label for="nombre">Nombre y Apelido</label>
+                    <input type="text" id="nombre" name="nombre" />
+                </div>
+                <div class="form-content">
+                    <label for="DNI">Documento</label>
+                    <input type="number" id="DNI" required />
+                </div>
+                <div class="form-content">
+                    <label for="monto">Monto</label>
+                    <input type="number" id="monto" name="monto" required />
+                </div>
+                <div class="form-content">
+                    <label for="CBU">CBU/ALIAS</label>
+                    <input type="text" id="CBU" required/>
+                </div>
+                <div class="boton">
+                    <input type="submit" />
+                </div>
+            </form>
+            <div class="alerta">{{save}}</div>
+        </div>
+    </div>
+</body>
+</html>

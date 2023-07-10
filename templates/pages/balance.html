@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Total</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/balance.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="container-menu area">
+            <div class="title menu">
+                <ul id="menu">
+                    <li>
+                        <a href="{{ url_for('index') }}">
+                            <div class="menu-item subtitle logo">
+                                <img src="{{ url_for('static', filename='img/logo.JPG') }}" alt="Logo" />
+                                <p class="subtitle">Pago Total</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('balance') }}">
+                            <div class="menu-item subtitle">
+                                <p class="subtitle">Saldos</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('transfer') }}">
+                            <div class="menu-item">
+                                <p class="subtitle">Transferencias</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('account') }}">
+                            <div class="menu-item">
+                                <p class="subtitle">Datos de la cuenta</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-main area">
+            <div class="title">Saldos de cuentas y tarjetas</div>
+            <br>
+            <div class="container">
+                <div class="card">
+                    <div>
+                        <h3>Cuenta corriente en pesos</h3>
+                        <h4>Banco HSBC</h4>
+                        <p>$ 300.000</p>
+                        <p>CBU: 100003457461</p> 
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>Caja de ahorro en pesos</h3>
+                        <h4>Banco BBVA</h4>
+                        <p>$ 1.000.000</p>
+                        <p>CBU: 100003457461</p> 
+                    </div>
+                </div>  
+                <div class="card">
+                    <div>
+                        <h3>Tarjeta de Credito Visa</h3>
+                        <h4>Banco HSBC</h4>
+                        <p>$ 500.000</p>
+                        <p>Nro: 9999 9999 9999 9999</p> 
+                    </div>
+                </div>  
+                <div class="card">
+                    <div>
+                        <h3>Trajeta prepaga Visa</h3>
+                        <h4>Tarjeta Naranja</h4>
+                        <p>$ 100.000</p>
+                        <p>Nro: 9999 9999 9999 9999</p> 
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

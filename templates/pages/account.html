@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Total</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/account.css') }}">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="container-menu area">
+            <div class="title menu">
+                <ul id="menu">
+                    <li>
+                        <a href="{{ url_for('index') }}">
+                            <div class="menu-item subtitle logo">
+                                <img src="{{ url_for('static', filename='img/logo.JPG') }}" alt="Logo" />
+                                <p class="subtitle">Pago Total</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('balance') }}">
+                            <div class="menu-item subtitle">
+                                <p class="subtitle">Saldos</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('transfer') }}">
+                            <div class="menu-item">
+                                <p class="subtitle">Transferencias</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('account') }}">
+                            <div class="menu-item">
+                                <p class="subtitle">Datos de la cuenta</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-main area">
+            <div class="title">Datos de la cuenta</div>
+            <br>
+            <div class="account-container">
+                <ul>
+                    <li>
+                        <div class="account-item subtitle">
+                            <p class="subtitle">Caja de ahorro en pesos</p>
+                            <p class="text">Nro: 11/9347436473/1</p>
+                            <p class="text">CBU: 1647385934736</p>
+                            <p class="text">ALIAS: CASA.ALMA.CAMA</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="account-item subtitle">
+                            <p class="subtitle">Caja de ahorro en dolares</p>
+                            <p class="text">Nro: 10/8374958372/3</p>
+                            <p class="text">CBU: 944837289393</p>
+                            <p class="text">ALIAS: HOJA.SILLA.FLAN</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="account-item subtitle">
+                            <p class="subtitle">Cuenta corriente</p>
+                            <p class="text">Nro: 17/8374635243/5</p>
+                            <p class="text">CBU: 900584736485</p>
+                            <p class="text">ALIAS: AURA.IMAN.DIAS</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
